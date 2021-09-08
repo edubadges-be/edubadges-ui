@@ -56,7 +56,7 @@ function validFetch(path, options = {}, method = "GET", useToken = true, showErr
 // Token and Profile
 
 export function requestSAMLLoginToken() {
-  window.location.href = `${serverUrl}/user/socialaccounts/samllogin`;
+  window.location.href = `${serverUrl}/account/socialaccounts/samllogin`;
 }
 
 export function requestLoginToken(service, validateName = false) {
