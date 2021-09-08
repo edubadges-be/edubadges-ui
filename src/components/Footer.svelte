@@ -2,7 +2,7 @@
   import I18n from "i18n-js";
   import Cookies from "js-cookie";
   import {userRole} from "../stores/user";
-  import surf from "../img/logo-surf.svg";
+  import belnet from "../img/logo-belnet.svg";
   import {ModalTerms} from "./forms";
 
   let showModal = false;
@@ -119,9 +119,9 @@
   <div class="info">
     <div class="inner">
       <span>{I18n.t('footer.poweredBy')}</span>
-      <a href={I18n.locale === 'en' ? "https://www.surf.nl/en" : "https://www.surf.nl"} target="_blank"
+      <a href={I18n.locale === 'en' ? "https://www.belnet.be/en" : "https://www.belnet.be/nl"} target="_blank"
          rel="noreferrer noopener">
-        {@html surf}
+        {@html belnet}
       </a>
     </div>
     <div class="inner">
