@@ -4,7 +4,7 @@
   import {userLoggedIn, userRole, redirectPath} from "../stores/user";
   import {role} from "../util/role";
   import {getService} from "../util/getService";
-  import {requestLoginToken} from "../api";
+  import {requestLoginToken, requestSAMLLoginToken} from "../api";
   import schoolbag from "../icons/school-bag.svg";
   import hand from "../icons/hand.svg";
   import catalog from "../icons/catalog.svg";
@@ -27,6 +27,11 @@
       });
     }
   });
+
+  const loginGeneric = () => {
+    requestSAMLLoginToken();
+  }
+
 
   const logIn = chosenRole => {
     $userRole = chosenRole;
@@ -152,7 +157,7 @@
   </div>
 
   <div class="login-cards">
-    <div class="login-element">
+    <!-- <div class="login-element">
       <div class="invite-only">
         <p>{I18n.t("login.teacher.byInviteOnly")}</p>
       </div>
@@ -172,7 +177,27 @@
         hidden={!showLoginCards}
         lineOne={I18n.t('login.teacher.accountCreation.askAccount')}/>
 
+    </div> -->
+
+
+    <div class="login-element">
+      <Card outOfFocus={!showLoginCards}>
+        <h2>
+          {@html I18n.t('login.generic.title')}
+        </h2>
+        <div class="svg-container">
+          {@html hand}
+        </div>
+        <h4>{I18n.t('login.teacher.subtitle')}</h4>
+        <LoginButton
+          label={I18n.t('login.generic.action')}
+          onClick={() => loginGeneric()}/>
+      </Card>
+      <CardSubtext
+        hidden={!showLoginCards}
+        lineOne={I18n.t('login.generic.info')}/>
     </div>
+
 
     <div class="login-element">
       <Card none={!showLoginCards}>
@@ -196,7 +221,7 @@
       <CardSubtext small={true} lineOne={I18n.t('login.catalog.info')}/>
 
     </div>
-    <div class="login-element">
+    <!-- <div class="login-element">
       <Card none={!showLoginCards}>
         <h2>
           {@html I18n.t('login.student.title')}
@@ -214,6 +239,6 @@
       </Card>
       <CardSubtext small={true} lineOne={I18n.t('login.student.noEduId')}/>
 
-    </div>
+    </div> -->
   </div>
 </div>

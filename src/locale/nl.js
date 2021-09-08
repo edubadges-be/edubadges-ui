@@ -49,6 +49,12 @@ I18n.translations.nl = {
       },
       byInviteOnly: "Alleen op uitnodiging"
     },
+    generic: {
+      title: "<strong style='font-size: 38px'>L</strong>ogin",
+      subtitle: "Login bij edubadges.",
+      action: "Open het portaal",
+      info: "Login bij the edubadges portaal om badges uit te delen of te ontvangen"
+    },
     createEduId: {
       welcome: "Welkom bij je edubadges backpack",
       awarded: "We hebben je je eerste edubadge toegekend 😀",

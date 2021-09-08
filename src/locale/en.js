@@ -49,6 +49,12 @@ I18n.translations.en = {
       },
       byInviteOnly: "By invite only"
     },
+    generic: {
+      title: "<strong style='font-size: 38px'>L</strong>ogin",
+      subtitle: "Login to edubadges.",
+      action: "Open the portal",
+      info: "Login to the edubadges portal to issue or receive badges"
+    },
     createEduId: {
       welcome: "Welcome to your edubadges backpack",
       awarded: "We’ve awarded you your first edubadge 😀",
